@@ -44,7 +44,7 @@ include("header.php");
 </div>
 
 <div class="container">
-    <h2>Running Movies</h2>
+    <h2>Running Top Movies</h2>
      <div class="row">
 <?php
 include_once 'Database.php';
