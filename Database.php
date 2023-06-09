@@ -1,5 +1,5 @@
 <?php
-$servername='192.168.20.158';
+$servername='fazle-db.c5tsce7xtv8b.eu-west-3.rds.amazonaws.com';
 $username='root';
 $password='';
 $dbname = "moviebook";
