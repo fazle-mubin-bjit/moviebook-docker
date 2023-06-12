@@ -28,7 +28,7 @@ SET time_zone = "+00:00";
 -- Table structure for table `add_movie`
 --
 USE moviebook;
-CREATE TABLE `add_movie` (
+CREATE TABLE IF NOT EXISTS `add_movie` (
   `id` int(25) NOT NULL,
   `movie_name` varchar(100) NOT NULL,
   `directer` varchar(100) NOT NULL,
@@ -62,7 +62,7 @@ INSERT INTO `add_movie` (`id`, `movie_name`, `directer`, `release_date`, `categr
 -- Table structure for table `admin`
 --
 
-CREATE TABLE `admin` (
+CREATE TABLE IF NOT EXISTS `admin` (
   `id` int(11) NOT NULL,
   `name` varchar(50) NOT NULL,
   `email` varchar(100) NOT NULL,
@@ -84,7 +84,7 @@ INSERT INTO `admin` (`id`, `name`, `email`, `password`, `is_active`) VALUES
 -- Table structure for table `customers`
 --
 
-CREATE TABLE `customers` (
+CREATE TABLE IF NOT EXISTS `customers` (
   `id` int(10) NOT NULL,
   `uid` int(10) NOT NULL,
   `movie` varchar(100) NOT NULL,
@@ -118,7 +118,7 @@ INSERT INTO `customers` (`id`, `uid`, `movie`, `show_time`, `seat`, `totalseat`,
 -- Table structure for table `feedback`
 --
 
-CREATE TABLE `feedback` (
+CREATE TABLE IF NOT EXISTS `feedback` (
   `id` int(100) NOT NULL,
   `name` varchar(100) NOT NULL,
   `email` varchar(50) NOT NULL,
@@ -141,7 +141,7 @@ INSERT INTO `feedback` (`id`, `name`, `email`, `massage`) VALUES
 -- Table structure for table `theater_show`
 --
 
-CREATE TABLE `theater_show` (
+CREATE TABLE IF NOT EXISTS `theater_show` (
   `id` int(25) NOT NULL,
   `show` varchar(100) NOT NULL,
   `theater` varchar(100) NOT NULL
@@ -165,7 +165,7 @@ INSERT INTO `theater_show` (`id`, `show`, `theater`) VALUES
 -- Table structure for table `user`
 --
 
-CREATE TABLE `user` (
+CREATE TABLE IF NOT EXISTS `user` (
   `id` int(25) NOT NULL,
   `username` varchar(100) NOT NULL,
   `email` varchar(100) NOT NULL,
