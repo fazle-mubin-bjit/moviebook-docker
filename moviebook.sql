@@ -47,7 +47,7 @@ CREATE TABLE IF NOT EXISTS `add_movie` (
 -- Dumping data for table `add_movie`
 --
 
-INSERT INTO `add_movie` (`id`, `movie_name`, `directer`, `release_date`, `categroy`, `language`, `you_tube_link`, `show`, `action`, `decription`, `image`, `status`) VALUES
+INSERT INTO IF NOT EXISTS `add_movie` (`id`, `movie_name`, `directer`, `release_date`, `categroy`, `language`, `you_tube_link`, `show`, `action`, `decription`, `image`, `status`) VALUES
 (9, 'Avengers', 'Kevin Feige', 'April 11, 2012', 'Scince', 'English', 'https://www.youtube.com/embed/eOrNdBpGMv8', '21:00', 'running', '                ', 'aven.jpg', 1),
 (10, 'Rampage', 'Brad Peyton', '13 April 2018', 'Adventure ', 'Hindi', '', '', 'upcoming', 'Jumanji is a 1995 American fantasy adventure film directed by Joe Johnston from a screenplay by Jonathan Hensleigh, Greg Taylor, and Jim Strain. Loosely based on Chris Van Allsburgs picture book of the same name, the film is the first installment of the Jumanji franc', 'rampage.jpg', 1),
 (13, 'Chaal Jeevi Laiye', 'Vipul Mehta', 'Jan 7, 2019', 'Drama', 'Gujarati', 'https://www.youtube.com/embed/y1NoFZPVTr0', '15:00,18:15', 'running', 'Chaal Jeevi Laiye is a story of a Father-Sons unplanned journey to escape a workaholic existence. The duo, Aditya Parikh and his father Bipin Chandra Parikh explore the meaning of life as they meet a stranger traveler named Ketki, who takes them on a journey of surprises and realiza', 'chaal-jivi-laiye.jpg', 1),
@@ -74,7 +74,7 @@ CREATE TABLE IF NOT EXISTS `admin` (
 -- Dumping data for table `admin`
 --
 
-INSERT INTO `admin` (`id`, `name`, `email`, `password`, `is_active`) VALUES
+INSERT INTO IF NOT EXISTS `admin` (`id`, `name`, `email`, `password`, `is_active`) VALUES
 (1, 'Jainam', 'jainmdg@gmail.com', 'admin', '1');
 
 
@@ -105,7 +105,7 @@ CREATE TABLE IF NOT EXISTS `customers` (
 -- Dumping data for table `customers`
 --
 
-INSERT INTO `customers` (`id`, `uid`, `movie`, `show_time`, `seat`, `totalseat`, `price`, `payment_date`, `booking_date`, `card_name`, `card_number`, `ex_date`, `cvv`, `custemer_id`) VALUES
+INSERT INTO IF NOT EXISTS `customers` (`id`, `uid`, `movie`, `show_time`, `seat`, `totalseat`, `price`, `payment_date`, `booking_date`, `card_name`, `card_number`, `ex_date`, `cvv`, `custemer_id`) VALUES
 (1, 1, 'Chaal Jeevi Laiye', '15:00', 'G1,G2,D1,D2', '4', '500', 'Wed-09-21 ', 'Thu-09-21 ', 'pratik d', '7896', '2021-09-30', 789, 1869901767),
 (2, 1, 'Tanaji', '15:15', 'F7,F8,E7,E8,A7,A8', '6', '1200', 'Thu-09-21 ', 'Fri-09-21 ', 'pratik d', '145260', '2021-09-30', 349, 1890244096),
 (3, 2, 'Chaal Jeevi Laiye', '15:00', 'I5,I6,H5,H6,G5,G6', '6', '600', 'Thu-09-21 ', 'Fri-09-21 ', 'parthiv', '45456845565', '2021-10-23', 455, 560041981),
@@ -129,7 +129,7 @@ CREATE TABLE IF NOT EXISTS `feedback` (
 -- Dumping data for table `feedback`
 --
 
-INSERT INTO `feedback` (`id`, `name`, `email`, `massage`) VALUES
+INSERT INTO IF NOT EXISTS `feedback` (`id`, `name`, `email`, `massage`) VALUES
 (1, 'pratik', 'prati@gmail.com', 'Inox Theatre is widely use now days.'),
 (2, 'parth', 'part@gmail.com', 'You can easily book your Tickets anywhere in city .'),
 (3, 'vrushti', 'vrusht@gmail.com', 'you easily choose your sheets.'),
@@ -151,7 +151,7 @@ CREATE TABLE IF NOT EXISTS `theater_show` (
 -- Dumping data for table `theater_show`
 --
 
-INSERT INTO `theater_show` (`id`, `show`, `theater`) VALUES
+INSERT INTO IF NOT EXISTS `theater_show` (`id`, `show`, `theater`) VALUES
 (1, '21:00', '1'),
 (2, '15:00', '1'),
 (3, '18:00', '1'),
@@ -179,7 +179,7 @@ CREATE TABLE IF NOT EXISTS `user` (
 -- Dumping data for table `user`
 --
 
-INSERT INTO `user` (`id`, `username`, `email`, `mobile`, `city`, `password`, `image`) VALUES
+INSERT INTO IF NOT EXISTS `user` (`id`, `username`, `email`, `mobile`, `city`, `password`, `image`) VALUES
 (1, 'pratik', 'prati@gmail.com', 4578945612, 'Surendranagar', '4550', ''),
 (2, 'parthiv', 'parthi@gmail.com', 2147483647, 'WADHWAN', '78963', ''),
 (3, 'rushabh', 'rushab@gmail.com', 1198875215, 'joravarnagar', '147852', ''),
