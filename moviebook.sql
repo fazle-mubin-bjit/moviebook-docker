@@ -27,7 +27,7 @@ SET time_zone = "+00:00";
 --
 -- Table structure for table `add_movie`
 --
-
+USE moviebook;
 CREATE TABLE `add_movie` (
   `id` int(25) NOT NULL,
   `movie_name` varchar(100) NOT NULL,
