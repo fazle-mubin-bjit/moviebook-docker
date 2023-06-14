@@ -2,6 +2,6 @@
 
 //database_connection.php
 
-$connect = new PDO("db-container", "root", "bjit1234");
+$connect = new PDO("mysql:host=db-container;dbname=moviebook", "root", "bjit1234");
 
 ?>
