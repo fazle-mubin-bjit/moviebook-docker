@@ -1,0 +1,40 @@
+version: '3'
+services:
+  mysql:
+    image: mysql:latest
+    container_name: db-container
+    environment:
+      - MYSQL_ROOT_PASSWORD=bjit1234
+      - MYSQL_DATABASE=moviebook
+      - MYSQL_USER=fazle
+      - MYSQL_PASSWORD=fazle1234
+    restart: always
+    volumes:
+      - /home/fazle/docker-moviebook/database_data:/var/lib/mysql
+    networks:
+      - my-network2
+
+  apache:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: web-container
+    ports:
+      - 5023:80
+    restart: always
+    volumes:
+      - /home/fazle/docker-moviebook/web_data:/var/www/html
+    networks:
+      - my-network2
+    depends_on:
+      - mysql
+
+networks:
+  my-network2:
+volumes:
+  database_data:
+  web_data:
+
+
+
+
